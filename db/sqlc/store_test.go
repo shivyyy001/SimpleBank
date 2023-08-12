@@ -93,7 +93,7 @@ func TestTransferTx(t *testing.T) {
 	}
 
 	// check the final updated balance
-	updatedAccount1, err := testQueries.GetAccount(context.Background(), account1.ID)
+	updatedAccount1, err := store.Queries.GetAccount(context.Background(), account1.ID)
 	require.NoError(t, err)
 
 	updatedAccount2, err := testQueries.GetAccount(context.Background(), account2.ID)
